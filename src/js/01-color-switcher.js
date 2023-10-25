@@ -27,3 +27,4 @@ stopBtn.addEventListener("click", () => {
   console.log(`Interval with id ${timerId} has stopped!`);
 }
 });
+console.log()

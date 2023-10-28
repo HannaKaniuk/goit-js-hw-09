@@ -30,12 +30,18 @@ class Clockface {
       this.intervalId = setInterval(() => {
         const currentTime = Date.now();
         const diff = this.initTime - currentTime;
-        const time = convertMs(diff);
-        this.render(time);
+        // const time = convertMs(diff);
+        // this.render(time);
         if (diff <= 0) { 
           this.stop();
+          Notiflix.Notify.success('Timer finished!');
+          return;
         }
+        const time = convertMs(diff);
+        this.render(time);
       }, 1000);
+    }else {
+      Notiflix.Notify.failure('Please choose a date in the future');
     }
   }
 

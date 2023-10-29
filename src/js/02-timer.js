@@ -80,11 +80,12 @@ refs.startBtn.addEventListener('click', () => {
   clockface.start();
 });
 
+
 function render(time) {
-  refs.days.textContent = time.days;
-  refs.hours.textContent = time.hours;
-  refs.minutes.textContent = time.minutes;
-  refs.seconds.textContent = time.seconds;
+  refs.days.textContent = String(time.days).padStart(2, '0');
+  refs.hours.textContent = String(time.hours).padStart(2, '0');
+  refs.minutes.textContent = String(time.minutes).padStart(2, '0');
+  refs.seconds.textContent = String(time.seconds).padStart(2, '0');
 }
 
 function convertMs(ms) {

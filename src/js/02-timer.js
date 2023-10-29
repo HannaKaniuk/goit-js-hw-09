@@ -54,7 +54,7 @@ class Clockface {
 }
 
 const clockface = new Clockface(render);
-
+refs.startBtn.disabled = true;
 const options = {
   enableTime: true,
   time_24hr: true,
